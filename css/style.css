@@ -1,4 +1,5 @@
-/****** Général ******/
+/****** General ******/
+
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -13,14 +14,14 @@
     color: var(--main-color);
 }
 
-/****** En-tête ******/
+/****** Header ******/
 
 nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    font-family: Raleway;
+    font-family: 'Raleway';
     margin-top: 10px;
     margin-bottom: 50px;
 }
@@ -44,13 +45,13 @@ nav div a:hover {
     color: #0065FC;
 }
 
-/****** Recherche Hébergements ******/
+/****** Accommodation Search ******/
 
-.titre-hebergement {
+.accommodation-title {
     font-size: 22px;
 }
 
-.titre-hebergement .sous-titre-hebergement {
+.accommodation-title .accommodation-subtitle {
     font-weight: normal;
     font-size: 16px;
 }
@@ -95,48 +96,211 @@ body {
     color: var(--main-bg-color)
 }
 
-/****** Hebergements And Populaires ***********/
-.hebergements-and-populaires {
+/****** Search-bar ******/
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    width: 377px;
+    height: 49px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Raleway';
+}
+
+.search-bar .localization-point {
+    width: 50px;
+    height: 49px;
+    background-color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.search-bar .localization-point i {
+    position: relative;
+    width: 14px;
+    height: 18px;
+    top: 15.5px;
+    left: 18px;
+    color: #000000;
+}
+
+.search-bar .search-text input {
+    width: 195px;
+    height: 47px;
+    border-radius: 0;
+    border: 1px solid #F2F2F2;
+}
+
+.search-bar .search-button input {
+    padding: 15px 16px;
+    width: 132px;
+    height: 51px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #0065FC;
+    border: 1px solid #0065FC;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.search-bar .search-button i {
+    visibility: hidden;
+}
+
+/****** Filters ******/
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    width: 758px;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Raleway';
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.filter-name {
+    font-size: 17px;
+    margin-right: 20px;
+}
+
+.filter-title {    
+    font-size: 16px;
+    color: #000000;
+    padding-left: 10px;
+}
+
+.filters i {
+    position: relative;
+    top: 17px;
+}
+
+.economic-filter {
+    width: 173px;
+    height: 50px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    color: #000000;
+    margin-right: 20px;
+}
+
+.economic-filter:hover {
+    background-color: #DEEBFF;
+}
+
+.familial-filter:hover {
+    background-color: #DEEBFF;
+}
+
+.romantic-filter:hover {
+    background-color: #DEEBFF;
+}
+
+.our-nuggets-filter:hover {
+    background-color: #DEEBFF;
+}
+
+.familial-filter {
+    width: 134px;
+    height: 50px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    color: #000000;
+    margin-right: 20px;
+
+}
+
+.romantic-filter {
+    width: 170px;
+    height: 50px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    color: #000000;
+    margin-right: 20px;
+}
+
+.our-nuggets-filter {
+    width: 167px;
+    height: 50px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    color: #000000;
+}
+
+.info {
+    display: flex;
+}
+
+.info-logo {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #D9D9D9;
+    border-radius: 45px;
+    margin-bottom: 30px;
+}
+
+.info-logo i {
+    position: relative;
+    top: 2px;
+    left: 9px;    
+}
+
+.info-txt {
+    font-size: 16px;
+    color: #000000;
+    padding-left: 10px;
+    margin-top: 3px;
+}
+
+/****** Accommodations And Populars ******/
+
+.accommodations-and-populars {
     display: flex;
     justify-content: space-between;
 }
 
-.hebergements-and-populaires section {
+.accommodations-and-populars section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
 }
 
-/****** Hebergements ***********/
-.hebergements {
+/****** Accommodations ******/
+
+.accommodations {
     width: 65%;
 }
 
-/****** Populaires ***********/
-.populaires {
+/****** Populars ******/
+
+.populars {
     width: 32%;
 }
 
-.populaires-title {
+.populars-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.populaires-cards .card {
+.populars-cards .card {
     display: flex;
     margin-top: 33px;
 }
 
-.populaires-cards img {
+.populars-cards img {
     width: 33%;
     height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
-.populaires-cards .card-content {
+.populars-cards .card-content {
     width: 67%;
     padding-left: 15px;
     display: flex;
@@ -145,57 +309,60 @@ body {
     box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
+.populars-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
 }
 
-.populaires-cards .card-subtitle {
+.populars-cards .card-subtitle {
     margin: 0;
 }
 
-.populaires-cards .card-rating {
+.populars-cards .card-rating {
     margin-bottom: 5px;
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
+/*************** Responsive Version ***************/
 
-/****** Media queries ***********/
+/****** Media Queries ******/
+
 /* Medium devices (tablets, less/equal than 1024px) */
+
 @media (max-width: 1024px) {
-    .hebergements-and-populaires {
+    .accommodations-and-populars {
         flex-direction: column;
     }
 
-    .hebergements {
+    .accommodations {
         width: 100%;
     }
 
-    .populaires {
+    .populars {
         width: 100%;
         margin-top: 50px;
     }
 
-    .populaires-cards {
+    .populars-cards {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .populaires-cards .card {
+    .populars-cards .card {
         width: 30%;
     }
 
-    .populaires-cards .card-title {
+    .populars-cards .card-title {
         font-size: 14px;
     }
 
-    .populaires-cards .card-subtitle {
+    .populars-cards .card-subtitle {
         font-size: 13px;
     }
 }
 
 /* Small devices (phones, less than 768px) */
+
 @media (max-width: 767.98px) {
     /* ... */
 }

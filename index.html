@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--Ajout des icônes Font Awesome-->
+    <!-- Font Awesome icons -->
     <script src="https://kit.fontawesome.com/944be96b40.js" crossorigin="anonymous"></script>
-    <!--------------------------------->
+    <!------------------------>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -25,27 +25,70 @@
                     <img src="images/logo/Booki.png" alt="Logo Booki"/>
                 </a>
                 <div>
-                    <a href="#hebergements">Hébergements</a>
-                    <a href="#activites">Activités</a>
+                    <a href="#accommodations">Hébergements</a>
+                    <a href="#activities">Activités</a>
                 </div>
             </nav>
         </header>
         <main>
-            <div class="recherche-herbegement">
-                <h2 class="titre-hebergement">Trouvez votre hébergement pour des vacances de rêve<br>
-                    <span class="sous-titre-hebergement">En plein centre-ville ou en pleine nature</span>
+            <div class="accommodation-search">
+                <h2 class="accommodation-title">Trouvez votre hébergement pour des vacances de rêve<br>
+                    <span class="accommodation-subtitle">En plein centre-ville ou en pleine nature</span>
                 </h2>
             </div>
-            <div class="hebergements-and-populaires">
-                <section class="hebergements">
-                    <h2 id="hebergements">Hébergements à Marseille</h2>
+            <form method="get" action="">
+                <div class="search-bar">
+                    <div class="localization-point">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="search-text">
+                        <input type="text" name="search" id="search">
+                    </div>
+                    <div class="search-button">
+                        <input type="submit" value="Rechercher">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </form>
+            <div class="filters">
+                <span class="filter-name">Filtres</span>
+                <div class="economic-filter">
+                    <a href="" alt="Filtre Économique">
+                        <i class="fa-solid fa-money-bill-wave"><span class="filter-title">Économique</span></i>
+                    </a>
+                </div>
+                <div class="familial-filter">
+                    <a href="" alt="Filtre Familial">
+                        <i class="fa-solid fa-person"><span class="filter-title">Familial</span></i>
+                    </a>                
+                </div>
+                <div class="romantic-filter">
+                    <a href="" alt="Filtre Romantique">
+                        <i class="fa-solid fa-heart"><span class="filter-title">Romantique</span></i>
+                    </a>
+                </div>
+                <div class="our-nuggets-filter">
+                    <a href="" alt="Filtre Nos pépites">
+                        <i class="fa-solid fa-fire"><span class="filter-title">Nos pépites</span></i>
+                    </a>
+                </div>
+            </div>
+                <div class="info">
+                    <div class="info-logo">
+                        <i class="fa-solid fa-info"></i>
+                    </div>
+                    <span class="info-txt">Plus de 500 logements sont disponibles dans cette ville</span>
+                </div>
+            <div class="accommodations-and-populars">
+                <section class="accommodations">
+                    <h2 class="section-title" id="accommodations">Hébergements à Marseille</h2>
                 </section>
-                <section class="populaires">
-                    <div class="populaires-title">
+                <section class="populars">
+                    <div class="populars-title">
                         <h2 class="section-title">Les plus populaires</h2>
                         <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
                     </div>
-                    <div class="populaires-cards">
+                    <div class="populars-cards">
                         <article class="card">
                             <img src="./images/hebergements/emile-guillemot.jpg" alt="Image de la chambre d'hôtel montrant un lit">
                             <div class="card-content">
@@ -100,8 +143,8 @@
                     </div>
                 </section>
             </div>
-            <section class="activites">
-                <h2 id="activites">Activités à Marseille</h2>
+            <section class="activities">
+                <h2 class="section-title" id="activities">Activités à Marseille</h2>
             </section>
 
         </main>
