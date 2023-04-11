@@ -2,6 +2,7 @@
 
 * {
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
@@ -12,48 +13,6 @@
 
 .fa-solid {
     color: var(--main-color);
-}
-
-/****** Header ******/
-
-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'Raleway';
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
-
-nav img {
-    height: 19.1px;
-    width: 60px;
-    left: 30px;
-    top: 30px;
-}
-
-nav div a {
-    margin-left: 50px;
-    text-decoration: none;
-    color: #000000;
-}
-
-nav div a:hover {
-    border-top: 2px solid #0065FC;
-    padding-top: 8px;
-    color: #0065FC;
-}
-
-/****** Accommodation Search ******/
-
-.accommodation-title {
-    font-size: 22px;
-}
-
-.accommodation-title .accommodation-subtitle {
-    font-weight: normal;
-    font-size: 16px;
 }
 
 body {
@@ -73,27 +32,50 @@ body {
     font-size: 22px;
 }
 
-.card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+/****** Header ******/
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Raleway';
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 0px;
+    list-style-type:none;
 }
 
-.card img {
-    object-fit: cover;
+nav ul li img {
+    height: 19.1px;
+    width: 60px;
 }
 
-.card-title {
+nav ul div {
+    display: flex;
+}
+
+nav ul div li a {
+    margin-left: 50px;
+    text-decoration: none;
+    color: #000000;
+}
+
+nav ul div li a:hover {
+    border-top: 2px solid #0065FC;
+    padding-top: 8px;
+    color: #0065FC;
+}
+
+/****** Accommodation Search ******/
+
+.accommodation-title {
+    font-size: 22px;
+}
+
+.accommodation-title .accommodation-subtitle {
+    font-weight: normal;
     font-size: 16px;
-}
-
-.euro {
-    font-weight: 700;
-}
-
-.neutral-star {
-    color: var(--main-bg-color)
 }
 
 /****** Search-bar ******/
@@ -109,6 +91,9 @@ body {
 }
 
 .search-bar .localization-point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 49px;
     background-color: #F2F2F2;
@@ -117,25 +102,20 @@ body {
 }
 
 .search-bar .localization-point i {
-    position: relative;
     width: 14px;
     height: 18px;
-    top: 15.5px;
-    left: 18px;
     color: #000000;
 }
 
 .search-bar .search-text input {
-    width: 195px;
-    height: 47px;
-    border-radius: 0;
+    height: 100%;
     border: 1px solid #F2F2F2;
 }
 
 .search-bar .search-button input {
     padding: 15px 16px;
     width: 132px;
-    height: 51px;
+    height: 100%;
     color: #ffffff;
     font-size: 18px;
     font-weight: bold;
@@ -150,7 +130,7 @@ body {
 
 /****** Filters ******/
 
-.filters {
+.filters-container {
     display: flex;
     flex-direction: row;
     width: 758px;
@@ -174,68 +154,32 @@ body {
     padding-left: 10px;
 }
 
-.filters i {
-    position: relative;
-    top: 17px;
-}
-
-.economic-filter {
-    width: 173px;
-    height: 50px;
+.filter {
+    display: flex;
+    align-items: center;
+    height: 100%;
     border: 2px solid #D9D9D9;
     border-radius: 25px;
     color: #000000;
     margin-right: 20px;
+    padding: 4px 19px;
 }
 
-.economic-filter:hover {
+.filter:hover {
     background-color: #DEEBFF;
-}
-
-.familial-filter:hover {
-    background-color: #DEEBFF;
-}
-
-.romantic-filter:hover {
-    background-color: #DEEBFF;
-}
-
-.our-nuggets-filter:hover {
-    background-color: #DEEBFF;
-}
-
-.familial-filter {
-    width: 134px;
-    height: 50px;
-    border: 2px solid #D9D9D9;
-    border-radius: 25px;
-    color: #000000;
-    margin-right: 20px;
-
-}
-
-.romantic-filter {
-    width: 170px;
-    height: 50px;
-    border: 2px solid #D9D9D9;
-    border-radius: 25px;
-    color: #000000;
-    margin-right: 20px;
-}
-
-.our-nuggets-filter {
-    width: 167px;
-    height: 50px;
-    border: 2px solid #D9D9D9;
-    border-radius: 25px;
-    color: #000000;
 }
 
 .info {
     display: flex;
+    flex-direction: row;
+    height: 24px;
+    margin-bottom: 30px;
 }
 
 .info-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 24px;
     height: 24px;
     border: 1px solid #D9D9D9;
@@ -243,17 +187,12 @@ body {
     margin-bottom: 30px;
 }
 
-.info-logo i {
-    position: relative;
-    top: 2px;
-    left: 9px;    
-}
-
 .info-txt {
+    display: flex;
+    align-items: center;
     font-size: 16px;
     color: #000000;
     padding-left: 10px;
-    margin-top: 3px;
 }
 
 /****** Accommodations And Populars ******/
@@ -268,6 +207,29 @@ body {
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
 }
 
 /****** Accommodations ******/
