@@ -24,46 +24,48 @@ body {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    box-sizing: border-box;
 }
 
 .section-title {
-    margin: 0;
+    margin: 0px 0px 30px 0px;
     font-size: 22px;
 }
 
-/****** Header ******/
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'Raleway';
-    margin-top: 10px;
-    margin-bottom: 50px;
-    padding: 0px;
-    list-style-type:none;
-}
-
-nav ul li img {
-    height: 19.1px;
-    width: 60px;
-}
-
-nav ul div {
-    display: flex;
-}
-
-nav ul div li a {
-    margin-left: 50px;
+a {
     text-decoration: none;
     color: #000000;
 }
 
-nav ul div li a:hover {
+a:visited {
+    color: #000000;
+}
+
+/****** Header ******/
+
+header {
+    margin-bottom: 50px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header nav ul img {
+    display: flex;
+    height: 19.1px;
+    width: 60px;
+}
+
+header nav ul div {
+    display: flex;
+    gap: 68px;
+}
+
+header nav ul div a:hover {
     border-top: 2px solid #0065FC;
-    padding-top: 8px;
+    padding-top: 15px;
     color: #0065FC;
 }
 
@@ -71,6 +73,7 @@ nav ul div li a:hover {
 
 .accommodation-title {
     font-size: 22px;
+    margin-bottom: 35px;
 }
 
 .accommodation-title .accommodation-subtitle {
@@ -82,12 +85,9 @@ nav ul div li a:hover {
 
 .search-bar {
     display: flex;
-    flex-direction: row;
     width: 377px;
     height: 49px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-family: 'Raleway';
+    margin-bottom: 35px;
 }
 
 .search-bar .localization-point {
@@ -132,20 +132,18 @@ nav ul div li a:hover {
 
 .filters-container {
     display: flex;
-    flex-direction: row;
     width: 758px;
     height: 50px;
     align-items: center;
     text-align: center;
-    font-family: 'Raleway';
     color: #000000;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
+    gap: 15px;
 }
 
 .filter-name {
     font-size: 17px;
-    margin-right: 20px;
 }
 
 .filter-title {    
@@ -161,7 +159,6 @@ nav ul div li a:hover {
     border: 2px solid #D9D9D9;
     border-radius: 25px;
     color: #000000;
-    margin-right: 20px;
     padding: 4px 19px;
 }
 
@@ -171,9 +168,8 @@ nav ul div li a:hover {
 
 .info {
     display: flex;
-    flex-direction: row;
     height: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .info-logo {
@@ -184,7 +180,6 @@ nav ul div li a:hover {
     height: 24px;
     border: 1px solid #D9D9D9;
     border-radius: 45px;
-    margin-bottom: 30px;
 }
 
 .info-txt {
@@ -200,6 +195,7 @@ nav ul div li a:hover {
 .accommodations-and-populars {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 35px;
 }
 
 .accommodations-and-populars section {
@@ -238,28 +234,64 @@ nav ul div li a:hover {
     width: 65%;
 }
 
+.accomodations-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.accomodations-cards img {
+    border-radius: 20px 20px 0px 0px;
+    width: 240.33px;
+    height: 124px;
+}
+
+.accomodations-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 0px 5px 15px;
+}
+
+.show-more h2 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 /****** Populars ******/
 
 .populars {
     width: 32%;
 }
 
+.populars-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .populars-title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.populars-cards .card {
+.populars-title i {
+    padding-top: 5px;
+}
+
+.populars-cards a {
+    width: 100%;
     display: flex;
-    margin-top: 33px;
 }
 
 .populars-cards img {
     width: 33%;
     height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-radius: 20px 0px 0px 20px;
 }
 
 .populars-cards .card-content {
@@ -268,7 +300,6 @@ nav ul div li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 
 .populars-cards .card-title {
@@ -282,6 +313,62 @@ nav ul div li a:hover {
 
 .populars-cards .card-rating {
     margin-bottom: 5px;
+}
+
+/****** Activities ******/
+
+.activities {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.activities .section-title {
+    margin: 30px 0px 10px 30px;
+}
+
+.activities img {
+    width: 297.5px;
+    height: 380px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.activities-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.activities .card-content {
+    padding-left: 15px;
+}
+
+/****** Footer ******/
+
+footer {
+    background-color: #F2F2F2;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 30px;
+    list-style-type:none;
+
+}
+
+footer nav ul div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.footer-titles {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /*************** Responsive Version ***************/
