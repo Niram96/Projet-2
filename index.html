@@ -38,9 +38,8 @@
         </header>
 
         <main>
-            <h2 class="accommodation-title">Trouvez votre hébergement pour des vacances de rêve<br>
-                <span class="accommodation-subtitle">En plein centre-ville ou en pleine nature</span>
-            </h2>
+            <h1 class="accommodation-title">Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p>En plein centre-ville ou en pleine nature</p>
             <form method="get" action="#">
                 <div class="search-bar">
                     <div class="localization-point">
@@ -49,41 +48,45 @@
                     <div class="search-text">
                         <input type="text" name="search" id="search">
                     </div>
-                    <div class="search-button">
-                        <input type="submit" value="Rechercher">
+                    <button class="search-button" type="button">
                         <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-                    </div>
+                        <span>Rechercher</span>
+                    </button>
                 </div>
             </form>
             <div class="filters-container">
                 <span class="filter-name">Filtres</span>
                 <div class="filter">
-                    <a href="#">
-                        <i class="fa-solid fa-money-bill-wave"><span class="filter-title">Économique</span></i>
-                    </a>
+                    <span>
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        <span class="filter-title">Économique</span>
+                    </span>
                 </div>
                 <div class="filter">
-                    <a href="#">
-                        <i class="fa-solid fa-person"><span class="filter-title">Familial</span></i>
-                    </a>                
+                    <span>
+                        <i class="fa-solid fa-person"></i>
+                        <span class="filter-title">Familial</span>
+                    </span>
                 </div>
                 <div class="filter">
-                    <a href="#">
-                        <i class="fa-solid fa-heart"><span class="filter-title">Romantique</span></i>
-                    </a>
+                    <span>
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="filter-title">Romantique</span>
+                    </span>
                 </div>
                 <div class="filter">
-                    <a href="#">
-                        <i class="fa-solid fa-fire"><span class="filter-title">Nos pépites</span></i>
-                    </a>
+                    <span>
+                        <i class="fa-solid fa-fire"></i>
+                        <span class="filter-title">Nos pépites</span>
+                    </span>
                 </div>
             </div>
             <div class="info">
                 <div class="info-logo">
-                    <i class="fa-solid fa-info"></i>
+                    <i class="fa-solid fa-info fa-xs"></i>
                 </div>
                 <span class="info-txt">Plus de 500 logements sont disponibles dans cette ville</span>
-                </div>
+            </div>
             <div class="accommodations-and-populars">
                 <section class="accommodations">
                     <h2 class="section-title" id="accommodations">Hébergements à Marseille</h2>
@@ -203,11 +206,7 @@
                             </a>
                         </article>
                     </div>
-                    <a href="">
-                        <div class="show-more">
-                            <h2>Afficher plus</h2>
-                        </div>
-                    </a>
+                    <button class="show-more" type="button">Afficher plus</button>
                 </section>
                 <section class="populars">
                     <div class="populars-title">
