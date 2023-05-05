@@ -2,8 +2,8 @@
 
 * {
     font-family: 'Raleway', sans-serif;
-    box-sizing: border-box;
     font-size: 1em;
+    box-sizing: border-box;
 }
 
 :root {
@@ -53,18 +53,18 @@ a:visited {
 
 /****** Header ******/
 
-header {
+.main-header {
     width: 100%;
     height: 79px;
     margin-bottom: 30px;
 }
 
-header nav ul {
+.main-header .main-nav ul {
     display: flex;
     gap: 69px;
 }
 
-header nav ul img {
+.main-header .main-nav ul img {
     display: flex;
     height: 19px;
     width: 61.09px;
@@ -72,22 +72,22 @@ header nav ul img {
     margin-top: 30px;
 }
 
-header nav ul .accommodations-button {
+.main-header .main-nav ul .accommodations-button {
     margin-left: auto;
 }
 
-header nav ul .activities-button {
+.main-header .main-nav ul .activities-button {
     margin-right: -7.39px;
 }
 
-header nav ul li~li {
+.main-header .main-nav ul li~li {
     margin-top: 16px;
 }
 
-header nav ul li~li a:hover {
+.main-header .main-nav ul li~li a:hover {
+    color: var(--main-color);
     border-top: 2px solid var(--main-color);
     padding-top: 14px;
-    color: var(--main-color);
 }
 
 /****** Accommodation Search ******/
@@ -105,11 +105,12 @@ h1+p {
 
 .search-bar {
     display: flex;
-    width: 377px;
-    height: 49px;
+    width: 375px;
+    height: 47px;
     margin-bottom: 35px;
     border: 1px solid var(--main-bg-color);
     border-radius: 15px;
+    box-sizing: content-box;
 }
 
 .search-bar .localization-point {
@@ -120,6 +121,7 @@ h1+p {
     height: 100%;
     background-color: var(--main-bg-color);
     border-radius: 15px 0px 0px 15px;
+    flex-shrink: 0;
 }
 
 .search-bar .localization-point i {
@@ -134,7 +136,7 @@ h1+p {
     border: none;
 }
 
-.search-bar button {
+.search-bar .search-button {
     width: 132px;
     height: 100%;
     color: #ffffff;
@@ -180,6 +182,14 @@ h1+p {
     cursor: pointer;
 }
 
+.filters-container .fa-person {
+    padding-right: 4.56px;
+}
+
+.filters-container .fa-fire {
+    padding-right: 1.5px;
+}
+
 .filter>span {
     display: flex;
     align-items: center;
@@ -188,6 +198,7 @@ h1+p {
     border-radius: 25px;
     color: #000000;
     padding: 4px 19px;
+    box-sizing: border-box;
 }
 
 .filter>span:hover {
@@ -410,13 +421,13 @@ h1+p {
 
 /****** Footer ******/
 
-footer {
+.main-footer {
     width: 100%;
     background-color: var(--main-bg-color);
     display: flex;
 }
 
-footer ul {
+.main-footer ul {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -433,21 +444,38 @@ footer ul {
 
 /****** Media Queries ******/
 
+/* Large devices (larger than 1440px) */
+
+@media (min-width: 1440.02px) {
+
+    .accommodations {
+        padding-bottom: 32.5px;
+    }
+
+    .populars {
+        padding-bottom: 30px;
+    }
+
+    .populars-cards img {
+        height: 136px;
+    } 
+}
+
 /* Medium devices (tablets, less/equal than 1024px) */
 
 @media (max-width: 1024px) {
 
 /****** Header ******/
 
-    header nav ul img {
+    .main-header .main-nav ul img {
         margin-left: 0;
     }
 
-    header nav ul .activities-button {
+    .main-header .main-nav ul .activities-button {
         margin-right: 0.31px;
     }
 
-/****** Filter ******/
+/****** Filters ******/
 
     .filters-container {
         width: 100%;
@@ -559,13 +587,13 @@ footer ul {
 
 /****** Header ******/
 
-    header {
+    .main-header {
         width: calc(100% + 40px);
         height: 115px;
         margin: 0 -20px 30px -20px;
     }    
     
-    header nav ul {
+    .main-header .main-nav ul {
         display: grid;
         border-collapse: collapse;     
         grid-template-rows: 49px 66px;
@@ -573,40 +601,36 @@ footer ul {
         gap: 0px;
     }
 
-    header nav ul :first-child {
+    .main-header .main-nav ul :first-child {
         grid-column: 1/3;
     }
 
-    header nav ul img {
+    .main-header .main-nav ul img {
         margin: 30px auto 0 auto;
     }
 
-    header nav ul .accommodations-button, .activities-button {
+    .main-header .main-nav ul .accommodations-button, .activities-button {
         margin: 30px 0 0 0;
         width: 100%;
     }
 
-    header nav ul li~li a {
+    .main-header .main-nav ul li~li {
+        margin-top: 30px;
+    }
+
+    .main-header .main-nav ul li~li a {
         display: block;
         border-bottom: 2px solid var(--main-bg-color);
         padding-bottom: 15px;
         text-align: center;
     }
 
-    header nav ul li~li a:hover {
+    .main-header .main-nav ul li~li a:hover {
+        color: var(--main-color);
         border-top: none;
+        padding-top: 0;
         margin: 0;
         border-bottom: 2px solid var(--main-color);
-        padding-top: 0;
-        color: var(--main-color);
-    }
-
-/****** Accommodations Search ******/
-
-    .accommodation-title {
-        height: 100%;
-        padding: 0;
-        margin-bottom: 8px;
     }
 
 /****** Search Bar ******/
@@ -676,6 +700,10 @@ footer ul {
         font-size: 0.875em;
     }
 
+    .filter-title {
+        font-size: 0.875em;
+    }
+
     .info {
         display: flex;
         justify-content: center;
@@ -737,7 +765,7 @@ footer ul {
 
     .accommodations-and-populars .accommodations {
         background-color: #ffffff;
-        margin: 35px 0 35px 0;
+        margin: 35px 0;
         padding: 0;
     }
 
@@ -787,12 +815,16 @@ footer ul {
 
 /****** Activities ******/
 
-    .activities-cards{
+    .activities-cards {
         display: flex;
         flex-direction: column;
         width: 100%;
         padding: 0 10px;
         gap: 15px;
+    }
+
+    .activities .section-title {
+        margin: 0 0 30px 10px;
     }
     
     .activities-cards .card {
@@ -811,7 +843,7 @@ footer ul {
 
 /****** Footer ******/
 
-    footer {
+    .main-footer {
         width: calc(100% + 40px);
         display: flex;
         flex-direction: column;
@@ -819,18 +851,17 @@ footer ul {
         padding: 0 30px 30px 30px;
     }
 
-    footer ul {
+    .main-footer ul {
         width: 100%;
         padding: 30px 0 0 0;
     }
 
-    footer ul~ul {
+    .main-footer ul~ul {
         padding: 50px 0 0 0;
     }
 }
 
-@media (max-width: 375px) {
-
+@media (max-width: 374.98px) {
 
     .filters-container {
         width: 100%;
@@ -838,13 +869,5 @@ footer ul {
 
     .filter {
         width: 48.2%;
-    }
-
-    .filter-title {
-        padding-left: 5px;
-    }
-
-    .filter>span {
-        padding: 4px 15px;
     }
 }
