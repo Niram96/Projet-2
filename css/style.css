@@ -105,12 +105,11 @@ h1+p {
 
 .search-bar {
     display: flex;
-    width: 375px;
-    height: 47px;
+    width: 377px;
+    height: 49px;
     margin-bottom: 35px;
-    border: 1px solid var(--main-bg-color);
+    outline: 1px solid var(--main-bg-color);
     border-radius: 15px;
-    box-sizing: content-box;
 }
 
 .search-bar .localization-point {
